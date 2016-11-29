@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <div>
         <p>
-          Selecting: <span className="counter">{selectingItems.length}</span>
+          SelectingX: <span className="counter">{selectingItems.length}</span>
           <br />
           Selected: <span className="counter">{selectedItems.length}</span>
         </p>
@@ -41,7 +41,7 @@ class App extends Component {
           enableDeselect
           tolerance={tolerance}
           globalMouse={isGlobal}
-          allowClickWithoutSelected={false}
+          allowClickWithoutSelected={true}
           duringSelection={this.handleSelecting}
           onSelectionClear={this.handleSelectionClear}
           onSelectionFinish={this.handleSelectionFinish}

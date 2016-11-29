@@ -7,7 +7,11 @@ module.exports = {
     path: path.resolve(__dirname, 'lib'),
     filename: 'react-selectable-single.js',
   },
-  module: {
+	watchOptions: {
+		aggregateTimeout: 300,
+		poll: 300
+	},
+	module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
     ]

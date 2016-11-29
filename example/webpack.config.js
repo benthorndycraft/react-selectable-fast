@@ -10,6 +10,10 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+	watchOptions: {
+		aggregateTimeout: 300,
+		poll: 300
+	},
   module: {
     loaders: [
       {
