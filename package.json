@@ -1,10 +1,10 @@
 {
-  "name": "react-selectable-fast-single",
+  "name": "react-selectable-single",
   "version": "1.2.1",
   "description": "Enable other React components to be selectable by drawing a box with your mouse/touch",
   "repository": {
     "type": "git",
-    "url": "git://github.com/benthorndycraft/react-selectable-fast.git"
+    "url": "git://github.com/benthorndycraft/react-selectable-single.git"
   },
   "main": "lib/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "prepublish": "npm run lint && npm run clean && npm run dist && npm run lib"
   },
   "bugs": {
-    "url": "https://github.com/benthorndycraft/react-selectable-fast-single/issues"
+    "url": "https://github.com/benthorndycraft/react-selectable-single/issues"
   },
   "keywords": [
     "selectable",
@@ -62,7 +62,7 @@
     "lib",
     "dist"
   ],
-  "homepage": "https://github.com/benthorndycraft/react-selectable-fast-single#readme",
+  "homepage": "https://github.com/benthorndycraft/react-selectable-single#readme",
   "directories": {
     "example": "example"
   }
