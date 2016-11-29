@@ -16,8 +16,11 @@ npm i -S react-selectable-single
 
 ## Based on react-selectable-fast & react-selectable
 This project is an extended version of [react-selectable-fast](https://github.com/valerybugakov/react-selectable-fast) by [valerybugakov](https://github.com/valerybugakov)
-This project was based on [react-selectable](https://github.com/unclecheese/react-selectable) by [unclecheese](https://github.com/unclecheese).
-Main idea of this fork is to eliminate render during selection caused by state updates of SelectableGroup. Only items under selectbox rerender themself, which great for big lists of selectable items. Also this package extends the original functionality with ability to scroll items while selecting relative to window and specified scroll container.
+Valerybugakov's project was based on [react-selectable](https://github.com/unclecheese/react-selectable) by [unclecheese](https://github.com/unclecheese).
+
+The idea of this fork is to add the ability to disable selecting of multiple items and disabling the drag/select functionality if needed.
+
+The main idea of valerybugakov's fork is to eliminate render during selection caused by state updates of SelectableGroup. Only items under selectbox rerender themself, which great for big lists of selectable items. Also this package extends the original functionality with ability to scroll items while selecting relative to window and specified scroll container.
 
 ## Usage
 
@@ -44,6 +47,7 @@ class App extends Component {
         onSelectionClear={this.handleSelectionClear}
         onSelectionFinish={this.handleSelectionFinish}
         ignoreList={['.not-selectable', '.item:nth-child(10)', '.item:nth-child(27)']}
+      
       >
         <List items={this.props.items} />
       </SelectableGroup>
