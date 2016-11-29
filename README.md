@@ -16,6 +16,7 @@ npm i -S react-selectable-single
 
 ## Based on react-selectable-fast & react-selectable
 This project is an extended version of [react-selectable-fast](https://github.com/valerybugakov/react-selectable-fast) by [valerybugakov](https://github.com/valerybugakov)
+
 Valerybugakov's project was based on [react-selectable](https://github.com/unclecheese/react-selectable) by [unclecheese](https://github.com/unclecheese).
 
 The idea of this fork is to add the ability to disable selecting of multiple items and disabling the drag/select functionality if needed.
@@ -47,7 +48,8 @@ class App extends Component {
         onSelectionClear={this.handleSelectionClear}
         onSelectionFinish={this.handleSelectionFinish}
         ignoreList={['.not-selectable', '.item:nth-child(10)', '.item:nth-child(27)']}
-      
+		  singleItemSelection={true}
+		  dragSelect={false}
       >
         <List items={this.props.items} />
       </SelectableGroup>
@@ -107,3 +109,5 @@ The `<SelectableGroup />` component accepts a few optional props:
 * `component` (String) The component to render. Defaults to `div`.
 * `allowClickWithoutSelected` (Boolean) When disabled items can be selected by click only if there are more than 1 already selected item.
 * `fixedPosition` (Boolean) Whether the `<SelectableGroup />` container is a fixed/absolute position element or the grandchild of one.
+* `singleItemSelection` (Boolean)
+* `dragSelect` (Boolean)
