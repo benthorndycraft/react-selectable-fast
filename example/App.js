@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <div>
         <p>
-          SelectingX: <span className="counter">{selectingItems.length}</span>
+          Selecting: <span className="counter">{selectingItems.length}</span>
           <br />
           Selected: <span className="counter">{selectedItems.length}</span>
         </p>
@@ -46,6 +46,8 @@ class App extends Component {
           onSelectionClear={this.handleSelectionClear}
           onSelectionFinish={this.handleSelectionFinish}
           ignoreList={['.not-selectable', '.item:nth-child(10)', '.item:nth-child(27)']}
+		  singleItemSelection={true}
+		  dragSelect={false}
         >
           <List items={this.props.items} />
         </SelectableGroup>

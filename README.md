@@ -14,8 +14,9 @@ npm i -S react-selectable-single
 
 [![react-selectable-single](https://nodei.co/npm/react-selectable-single.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-selectable-single/)
 
-## Based on react-selectable
-This project is based on [react-selectable](https://github.com/unclecheese/react-selectable) by [unclecheese](https://github.com/unclecheese).
+## Based on react-selectable-fast & react-selectable
+This project is an extended version of [react-selectable-fast](https://github.com/valerybugakov/react-selectable-fast) by [valerybugakov](https://github.com/valerybugakov)
+This project was based on [react-selectable](https://github.com/unclecheese/react-selectable) by [unclecheese](https://github.com/unclecheese).
 Main idea of this fork is to eliminate render during selection caused by state updates of SelectableGroup. Only items under selectbox rerender themself, which great for big lists of selectable items. Also this package extends the original functionality with ability to scroll items while selecting relative to window and specified scroll container.
 
 ## Usage
