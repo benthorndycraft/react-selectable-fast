@@ -59,6 +59,7 @@ class SelectableGroup extends Component {
 
 		//bt disable multiselect of items
 		singleItemSelection: PropTypes.bool,
+		dragSelect: PropTypes.bool,
 
 	}
 
@@ -78,6 +79,7 @@ class SelectableGroup extends Component {
 
 		//bt disable multiselect of items
 		singleItemSelection: true,
+		dragSelect: false,
 
 	}
 
@@ -121,16 +123,20 @@ class SelectableGroup extends Component {
 		this.rootNode = this.selectableGroup
 		this.scrollContainer = document.querySelector(this.props.scrollContainer) || this.rootNode
 		this.initialRootBounds = this.rootNode.getBoundingClientRect()
+
 		this.rootNode.addEventListener('mousedown', this.mouseDown)
-		this.rootNode.addEventListener('touchstart', this.mouseDown)
+		//this.rootNode.addEventListener('touchstart', this.mouseDown)
+
 		document.addEventListener('keydown', this.keyListener)
 		document.addEventListener('keyup', this.keyListener)
 		this.isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor)
 	}
 
 	componentWillUnmount() {
+
 		this.rootNode.removeEventListener('mousedown', this.mouseDown)
-		this.rootNode.removeEventListener('touchstart', this.mouseDown)
+		//this.rootNode.removeEventListener('touchstart', this.mouseDown)
+
 		document.removeEventListener('keydown', this.keyListener)
 		document.removeEventListener('keyup', this.keyListener)
 	}
@@ -293,6 +299,7 @@ class SelectableGroup extends Component {
 
 		//bt define singleItemSelection from props
 		const singleItemSelection = this.props.singleItemSelection;
+		const dragSelect = this.props.noDragSelect;
 
 		if (click && isCollided) {
 			if (selected) {
@@ -312,28 +319,31 @@ class SelectableGroup extends Component {
 			return this.clickedItem = item
 		}
 
-		if (!click && isCollided) {
-			debugger;
-			if (selected && enableDeselect && (!this.selectionStarted || mixedDeselect)) {
-				item.setState({selected: false})
-				item.deselected = true
-				this.deselectionStarted = true
-				return this.selectedItems.delete(item)
+
+		if(dragSelect) {
+			if (!click && isCollided) {
+				//debugger;
+				if (selected && enableDeselect && (!this.selectionStarted || mixedDeselect)) {
+					item.setState({selected: false})
+					item.deselected = true
+					this.deselectionStarted = true
+					return this.selectedItems.delete(item)
+				}
+
+				const canSelect = mixedDeselect ? !item.deselected : !this.deselectionStarted
+				if (!selecting && !selected && canSelect) {
+					item.setState({selecting: true})
+					this.selectionStarted = true
+					return this.selectingItems.add(item)
+				}
 			}
 
-			const canSelect = mixedDeselect ? !item.deselected : !this.deselectionStarted
-			if (!selecting && !selected && canSelect) {
-				item.setState({selecting: true})
-				this.selectionStarted = true
-				return this.selectingItems.add(item)
-			}
-		}
-
-		if (!click && !isCollided && selecting) {
-			debugger;
-			if (this.selectingItems.has(item)) {
-				item.setState({selecting: false})
-				return this.selectingItems.delete(item)
+			if (!click && !isCollided && selecting) {
+				//debugger;
+				if (this.selectingItems.has(item)) {
+					item.setState({selecting: false})
+					return this.selectingItems.delete(item)
+				}
 			}
 		}
 
@@ -341,7 +351,6 @@ class SelectableGroup extends Component {
 	}
 
 	clearSelection = () => {
-		debugger;
 		for (const item of this.selectedItems.values()) {
 			item.setState({selected: false})
 			this.selectedItems.delete(item)
