@@ -1,10 +1,10 @@
 {
   "name": "react-selectable-fast",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Enable other React components to be selectable by drawing a box with your mouse/touch",
   "repository": {
     "type": "git",
-    "url": "git://github.com/valerybugakov/react-selectable-fast.git"
+    "url": "git://github.com/benthorndycraft/react-selectable-fast.git"
   },
   "main": "lib/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "prepublish": "npm run lint && npm run clean && npm run dist && npm run lib"
   },
   "bugs": {
-    "url": "https://github.com/valerybugakov/react-selectable-fast/issues"
+    "url": "https://github.com/benthorndycraft/react-selectable-fast/issues"
   },
   "keywords": [
     "selectable",
@@ -32,7 +32,7 @@
     "touch",
     "react"
   ],
-  "author": "Valery Bugakov <skymk1@gmail.com>",
+  "author": "Ben Thorndycraft <bennyticklez@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.6.5",
@@ -62,7 +62,7 @@
     "lib",
     "dist"
   ],
-  "homepage": "https://github.com/valerybugakov/react-selectable-fast#readme",
+  "homepage": "https://github.com/benthorndycraft/react-selectable-fast#readme",
   "directories": {
     "example": "example"
   }
