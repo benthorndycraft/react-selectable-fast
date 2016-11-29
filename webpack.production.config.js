@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
-    filename: 'react-selectable-fast.js',
+    filename: 'react-selectable-single.js',
     library: 'Selectable',
     libraryTarget: 'umd'
   },

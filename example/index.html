@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>React-selectable-fast by valerybugakov</title>
+    <title>React-selectable-single by benthorndycraft</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="./styles/normalize.css" media="screen" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -10,23 +10,23 @@
     <link href="./styles/github-light.css" media="screen" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <a href="https://github.com/valerybugakov/react-selectable-fast">
+    <a href="https://github.com/benthorndycraft/react-selectable-single">
       <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
     </a>
     <section class="page-header">
-      <h1 class="project-name">React-selectable-fast</h1>
+      <h1 class="project-name">React-selectable-single</h1>
       <h2 class="project-tagline">Enable a React component (or group of components) to be selectable.</h2>
-      <a class="btn" href="https://github.com/valerybugakov/react-selectable-fast">View on GitHub</a>
-      <a class="btn" href="https://github.com/valerybugakov/react-selectable-fast/zipball/master">Download .zip</a>
-      <a class="btn" href="https://github.com/valerybugakov/react-selectable-fast/tarball/master">Download .tar.gz</a>
+      <a class="btn" href="https://github.com/benthorndycraft/react-selectable-single">View on GitHub</a>
+      <a class="btn" href="https://github.com/benthorndycraft/react-selectable-single/zipball/master">Download .zip</a>
+      <a class="btn" href="https://github.com/benthorndycraft/react-selectable-single/tarball/master">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
       <h1>
-        react-selectable-fast
-        <img alt="npm" src="https://img.shields.io/npm/v/react-selectable-fast.svg">
-        <img alt="license" src="https://img.shields.io/npm/l/react-selectable-fast.svg">
-        <img alt="github-issues" src="https://img.shields.io/github/issues/valerybugakov/react-selectable-fast.svg">
+        react-selectable-single
+        <img alt="npm" src="https://img.shields.io/npm/v/react-selectable-single.svg">
+        <img alt="license" src="https://img.shields.io/npm/l/react-selectable-single.svg">
+        <img alt="github-issues" src="https://img.shields.io/github/issues/benthorndycraft/react-selectable-single.svg">
       </h1>
 
       <h2>
@@ -36,11 +36,11 @@
         Install
       </h2>
       <div class="highlight highlight-sh">
-        <pre>npm i -S react-selectable-fast</pre>
+        <pre>npm i -S react-selectable-single</pre>
       </div>
       <p>
-        <a href="https://nodei.co/npm/react-selectable-fast">
-          <img alt="react-selectable-fast" src="https://nodei.co/npm/react-selectable-fast.png?downloads=true&amp;downloadRank=true&amp;stars=true">
+        <a href="https://nodei.co/npm/react-selectable-single">
+          <img alt="react-selectable-single" src="https://nodei.co/npm/react-selectable-single.png?downloads=true&amp;downloadRank=true&amp;stars=true">
         </a>
       </p>
 
@@ -52,7 +52,7 @@
       <p>Package exports 4 components <code>{ SelectableGroup, createSelectable, SelectAll, DeselectAll }</code>.
 To make other components selectable create selectable component with <code>createSelectable()</code> function and put a list of them under <code>SelectableGroup</code>.</p>
       <div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">React</span>, { <span class="pl-smi">Component</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>
-<span class="pl-k">import</span> { <span class="pl-smi">SelectableGroup</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react-selectable-fast<span class="pl-pds">'</span></span>
+<span class="pl-k">import</span> { <span class="pl-smi">SelectableGroup</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react-selectable-single<span class="pl-pds">'</span></span>
 
 <span class="pl-k">class</span> <span class="pl-en">App</span> <span class="pl-k">extends</span> <span class="pl-e">Component</span> {
   <span class="pl-k">...</span>
@@ -77,7 +77,7 @@ To make other components selectable create selectable component with <code>creat
   }
 }</pre></div>
       <div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">React</span>, { <span class="pl-smi">Component</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>
-<span class="pl-k">import</span> { <span class="pl-smi">createSelectable</span>, <span class="pl-smi">SelectAll</span>, <span class="pl-smi">DeselectAll</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react-selectable-fast<span class="pl-pds">'</span></span>
+<span class="pl-k">import</span> { <span class="pl-smi">createSelectable</span>, <span class="pl-smi">SelectAll</span>, <span class="pl-smi">DeselectAll</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react-selectable-single<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> <span class="pl-smi">SomeComponent</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>./SomeComponent<span class="pl-pds">'</span></span>
 
 <span class="pl-k">const</span> <span class="pl-c1">SelectableComponent</span> <span class="pl-k">=</span> <span class="pl-en">createSelectable</span>(SomeComponent)
@@ -142,7 +142,7 @@ To make other components selectable create selectable component with <code>creat
       <h2><a class="anchor" href="#license" id="license"><span class="octicon octicon-link"></span></a>License</h2>
       <p>See <a href="./LICENSE">MIT</a></p>
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/valerybugakov/react-selectable-fast">React-selectable-fast</a></span>
+        <span class="site-footer-owner"><a href="https://github.com/benthorndycraft/react-selectable-single">React-selectable-single</a></span>
       </footer>
       <span class="site-footer-owner"></span>
     </section>

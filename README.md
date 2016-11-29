@@ -1,18 +1,18 @@
-# React-selectable-fast ![npm](https://img.shields.io/npm/v/react-selectable-fast.svg) ![license](https://img.shields.io/npm/l/react-selectable-fast.svg) ![github-issues](https://img.shields.io/github/issues/valerybugakov/react-selectable-fast.svg)
+# React-selectable-single ![npm](https://img.shields.io/npm/v/react-selectable-single.svg) ![license](https://img.shields.io/npm/l/react-selectable-single.svg) ![github-issues](https://img.shields.io/github/issues/benthorndycraft/react-selectable-single.svg)
 
 Enable a React component (or group of components) to be selectable via mouse/touch.
 
 ## Demo
 
-http://valerybugakov.github.io/react-selectable-fast
+http://benthorndycraft.github.io/react-selectable-single
 
 ## Install
 
 ```sh
-npm i -S react-selectable-fast
+npm i -S react-selectable-single
 ```
 
-[![react-selectable-fast](https://nodei.co/npm/react-selectable-fast.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-selectable-fast/)
+[![react-selectable-single](https://nodei.co/npm/react-selectable-single.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-selectable-single/)
 
 ## Based on react-selectable
 This project is based on [react-selectable](https://github.com/unclecheese/react-selectable) by [unclecheese](https://github.com/unclecheese).
@@ -25,7 +25,7 @@ To make other components selectable wrap them using HoF `createSelectable` and p
 
 ```js
 import React, { Component } from 'react'
-import { SelectableGroup } from 'react-selectable-fast'
+import { SelectableGroup } from 'react-selectable-single'
 
 class App extends Component {
   ...
@@ -53,7 +53,7 @@ class App extends Component {
 
 ```js
 import React from 'react'
-import { createSelectable } from 'react-selectable-fast'
+import { createSelectable } from 'react-selectable-single'
 
 const SomeComponent = () => (
   <div>...</div>
@@ -64,7 +64,7 @@ export default createSelectable(SomeComponent)
 
 ```js
 import React from 'react'
-import { SelectAll, DeselectAll } from 'react-selectable-fast'
+import { SelectAll, DeselectAll } from 'react-selectable-single'
 import SelectableComponent from './SomeComponent'
 
 const List = () => (
